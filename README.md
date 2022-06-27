@@ -1,6 +1,6 @@
-# BYAM - Yet Another Model for Books recommendation
+# YABRM - Yet Another Books Recommendation Model
 
-Byam est une API en apprentissage continue qui permet de recommander des livres à des utilisateurs, quelque soit leur ancienneté, via différent modèles de recommandations (Popularité, Contenu et Collaboratif).
+YABRM est une API en apprentissage continue qui permet de recommander des livres à des utilisateurs, quelque soit leur ancienneté, via différent modèles de recommandations (Popularité, Contenu et Collaboratif).
 
 Le principe est d'apprendre de l'utilisateur dès son inscription en lui proposant de noter une dizaine de livres. La liste de livres recommandés à noter s'améliorant à chaque notation.
 
