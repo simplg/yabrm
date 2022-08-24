@@ -1,0 +1,20 @@
+{% extends "layout/base.html" %}
+{% block content %}
+    <div class="container">
+        <h1>Last added books</h1>
+        <div class="row">    
+            {% for book in last_books %}
+                <div class="col col-md-4 mb-3">
+                    <div class="card">
+                        <img src="{{ book.image }}" class="card-img-top" alt="{{ book.name }}">
+                        <div class="card-body">
+                            <h2 class="card-title">{{ book.name }}</h2>
+                            <p class="card-text">{{ book.description }}</p>
+                            <a href="{% url 'ml:book_detail' book.id %}" class="btn btn-primary">See more</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends "layout/base.html" %}
+{% block content %}
+<div class="container">
+    <h1>Books</h1>
+    <div class="row">    
+        {% for book in page_obj %}
+            <div class="col col-md-4 mb-3">
+                <div class="card">
+                    <img src="{{ book.image }}" class="card-img-top" alt="{{ book.name }}">
+                    <div class="card-body">
+                        <h2 class="card-title">{{ book.name }}</h2>
+                        <p class="card-text">{{ book.description|truncatechars:250 }}</p>
+                        <a href="{% url 'ml:book_detail' book.id %}" class="btn btn-primary">See more</a>
+                    </div>
+                </div>
+            </div>
+        {% empty %}
+        <h2>No books yet.</h2>
+        {% endfor %}
+    </div>
+</div>
+
+{% include "helpers/pagination.html" %}
+{% endblock %}

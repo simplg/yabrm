@@ -1,0 +1,30 @@
+{% extends "layout/base.html" %}
+{% block content %}
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <h2 class="card-title">{{ book.name }}</h2>
+            <div class="row">
+                <div class="col-4">
+                    <img src="{{ book.image }}" class="img-fluid" alt="{{ book.name }}">
+                </div>
+                <div class="col">
+                    <p>
+                        <span class="fw-bold">Author:</span> {{ book.author.name }}<br>
+                        <span class="fw-bold">Published Year:</span> {{ book.publication_year }}<br>
+                        <span class="fw-bold">Publisher:</span> {{ book.publisher }}<br>
+                        <span class="fw-bold">Tags:</span>
+                        {% for tag in book.tags.all %}
+                            <span class="badge bg-primary">{{ tag.name }}</span>
+                        {% endfor %}
+                        <br>
+                        <span class="fw-bold">ISBN:</span> {{ book.isbn }}<br>
+                    </p>
+                </div>
+            </div>
+            <p class="card-text">{{ book.description }}</p>
+            <a href="{% url 'ml:book_list' %}" class="btn btn-primary">Back</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

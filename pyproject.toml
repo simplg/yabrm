@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "yabrm"
+version = "0.1.0"
+description = "YABRM est une API en apprentissage continue qui permet de recommander des livres à des utilisateurs, quelque soit leur ancienneté, via différent modèles de recommandations (Popularité, Contenu et Collaboratif)."
+authors = ["simplg <81249731+simplg@users.noreply.github.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.11"
+tensorflow = "^2.9.1"
+tensorflow-recommenders = "^0.6.0"
+psycopg2 = "^2.9.3"
+pandas = "^1.4.3"
+tqdm = "^4.64.0"
+Django = "^4.0.5"
+joblib = "^1.1.0"
+SQLAlchemy = "^1.4.39"
+django-compressor = "^4.0"
+django-libsass = "^0.9"
+torchmetrics = "^0.9.3"
+pytorch-lightning = "^1.6.5"
+torch-tb-profiler = "^0.4.0"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
